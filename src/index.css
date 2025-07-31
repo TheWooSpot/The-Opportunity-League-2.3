@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Base font size for mobile and tablet */
+    font-size: 90%;
+    
+    /* Larger font size for desktop */
+    @media (min-width: 1024px) {
+      font-size: 110%;
+    }
+  }
+  
+  body {
+    @apply font-body text-dark bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium transition-all rounded-md font-heading;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-primary hover:bg-primary-dark shadow-button;
+  }
+  
+  .btn-secondary {
+    @apply text-white bg-secondary hover:bg-secondary-dark;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .section {
+    @apply py-12 md:py-20;
+  }
+  
+  .section-title {
+    @apply mb-2 text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .section-subtitle {
+    @apply mb-8 text-lg text-dark-lighter md:text-xl;
+  }
+}
