@@ -571,71 +571,65 @@ const ProgramsPage = () => {
           <div className="space-y-6">
             {/* Age Filter */}
             <div>
-              <div className="flex items-center mb-3">
-                <FaFilter className="mr-2 text-primary" />
-                <span className="font-bold text-lg">Filter by Age:</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {ageRanges.map((age) => (
-                  <button
-                    key={age.value}
-                    onClick={() => setSelectedAge(age.value)}
-                    className={`px-4 py-2 rounded-full font-medium transition-all ${
-                      selectedAge === age.value
-                        ? `${age.color} text-white shadow-lg scale-105`
-                        : 'bg-white text-dark hover:shadow-md'
-                    }`}
-                  >
-                    {age.label}
-                  </button>
-                ))}
-              </div>
+        {/* Three Column Filter Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Age Column */}
+          <div>
+            <h3 className="font-bold text-xl mb-4 text-center">Age Range</h3>
+            <div className="space-y-2">
+              {ageRanges.map((age) => (
+                <button
+                  key={age.value}
+                  onClick={() => setSelectedAge(age.value)}
+                  className={`w-full px-4 py-3 rounded-lg font-medium transition-all text-left ${
+                    selectedAge === age.value
+                      ? `${age.color} text-white shadow-lg`
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {age.label}
+                </button>
+              ))}
             </div>
+          </div>
 
-            {/* Interest Filter */}
-            <div>
-              <div className="flex items-center mb-3">
-                <FaFilter className="mr-2 text-primary" />
-                <span className="font-bold text-lg">Filter by Interest:</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {interests.map((interest) => (
-                  <button
-                    key={interest.value}
-                    onClick={() => setSelectedInterest(interest.value)}
-                    className={`px-4 py-2 rounded-full font-medium transition-all ${
-                      selectedInterest === interest.value
-                        ? `${interest.color} text-white shadow-lg scale-105`
-                        : 'bg-white text-dark hover:shadow-md'
-                    }`}
-                  >
-                    {interest.label}
-                  </button>
-                ))}
-              </div>
+          {/* Interest Column */}
+          <div>
+            <h3 className="font-bold text-xl mb-4 text-center">Interests</h3>
+            <div className="space-y-2">
+              {interests.map((interest) => (
+                <button
+                  key={interest.value}
+                  onClick={() => setSelectedInterest(interest.value)}
+                  className={`w-full px-4 py-3 rounded-lg font-medium transition-all text-left ${
+                    selectedInterest === interest.value
+                      ? `${interest.color} text-white shadow-lg`
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {interest.label}
+                </button>
+              ))}
             </div>
+          </div>
 
-            {/* Day Filter */}
-            <div>
-              <div className="flex items-center mb-3">
-                <FaFilter className="mr-2 text-primary" />
-                <span className="font-bold text-lg">Filter by Day:</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {daysOfWeek.map((day) => (
-                  <button
-                    key={day.value}
-                    onClick={() => setSelectedDay(day.value)}
-                    className={`px-4 py-2 rounded-full font-medium transition-all ${
-                      selectedDay === day.value
-                        ? `${day.color} text-white shadow-lg scale-105`
-                        : 'bg-white text-dark hover:shadow-md'
-                    }`}
-                  >
-                    {day.label}
-                  </button>
-                ))}
-              </div>
+          {/* Day Column */}
+          <div>
+            <h3 className="font-bold text-xl mb-4 text-center">Schedule</h3>
+            <div className="space-y-2">
+              {daysOfWeek.map((day) => (
+                <button
+                  key={day.value}
+                  onClick={() => setSelectedDay(day.value)}
+                  className={`w-full px-4 py-3 rounded-lg font-medium transition-all text-left ${
+                    selectedDay === day.value
+                      ? `${day.color} text-white shadow-lg`
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {day.label}
+                </button>
+              ))}
             </div>
           </div>
         </div>
