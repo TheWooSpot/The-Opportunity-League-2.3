@@ -633,6 +633,8 @@ const ProgramsPage = () => {
             </div>
           </div>
         </div>
+      </div>
+        </div>
       </section>
 
       {/* Programs Grid */}
