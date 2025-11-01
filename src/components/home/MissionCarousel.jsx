@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Image from '../common/Image';
 
 const MissionCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -83,7 +84,7 @@ const MissionCarousel = () => {
                   </p>
                 </div>
                 <div className="relative order-first md:order-last">
-                  <img
+                  <Image
                     src={slides[current].image}
                     alt={slides[current].title}
                     className="object-cover w-full h-64 rounded-lg shadow-lg md:h-full"

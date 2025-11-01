@@ -7,19 +7,28 @@
     scroll-behavior: smooth;
     /* Base font size for mobile and tablet */
     font-size: 90%;
-    
+
     /* Larger font size for desktop */
     @media (min-width: 1024px) {
       font-size: 110%;
     }
   }
-  
+
   body {
     @apply font-body text-dark bg-white;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
+  }
+
+  img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  img.loaded {
+    opacity: 1;
   }
 }
 

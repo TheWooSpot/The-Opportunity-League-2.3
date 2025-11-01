@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import Image from '../common/Image';
 
 const UpcomingEvents = () => {
   const { ref, inView } = useInView({
@@ -89,7 +90,7 @@ const UpcomingEvents = () => {
               className="overflow-hidden transition-shadow bg-white rounded-lg shadow-card hover:shadow-lg"
             >
               <div className="relative h-48">
-                <img
+                <Image
                   src={event.image}
                   alt={event.title}
                   className="object-cover w-full h-full"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaSearch, FaCalendarAlt, FaMapMarkerAlt, FaClock, FaFilter } from 'react-icons/fa';
+import Image from '../components/common/Image';
 
 const ProgramsPage = () => {
   useEffect(() => {
@@ -649,13 +650,13 @@ const ProgramsPage = () => {
               <motion.div
                 key={program.id}
                 layout
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.5) }}
                 className="overflow-hidden transition-all bg-white rounded-lg shadow-card hover:shadow-lg hover:scale-105"
               >
                 <div className="relative h-48">
-                  <img
+                  <Image
                     src={program.image}
                     alt={program.title}
                     className="object-cover w-full h-full"

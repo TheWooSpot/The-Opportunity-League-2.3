@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaHeart, FaEye, FaStar } from 'react-icons/fa';
+import Image from '../components/common/Image';
 
 const AboutPage = () => {
   useEffect(() => {
@@ -96,9 +97,9 @@ const AboutPage = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
             >
-              <img
+              <Image
                 src="https://images.pexels.com/photos/8364146/pexels-photo-8364146.jpeg"
                 alt="Youth participating in programs"
                 className="object-cover w-full h-96 rounded-lg shadow-lg"
@@ -201,10 +202,10 @@ const AboutPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="p-6 text-center bg-white rounded-lg shadow-card"
               >
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
                   className="object-cover w-24 h-24 mx-auto mb-4 rounded-full"

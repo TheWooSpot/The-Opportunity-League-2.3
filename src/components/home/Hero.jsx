@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Image from '../common/Image';
 
 const Hero = () => {
   return (
     <section className="relative h-screen min-h-[600px] flex items-center text-white">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.pexels.com/photos/8363104/pexels-photo-8363104.jpeg" 
-          alt="Youth playing basketball" 
+        <Image
+          src="https://images.pexels.com/photos/8363104/pexels-photo-8363104.jpeg"
+          alt="Youth playing basketball"
           className="object-cover w-full h-full"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/80 to-dark/50"></div>

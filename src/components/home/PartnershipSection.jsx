@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Image from '../common/Image';
 
 const PartnershipSection = () => {
   const { ref, inView } = useInView({
@@ -75,7 +76,7 @@ const PartnershipSection = () => {
               variants={itemVariants}
               className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm"
             >
-              <img
+              <Image
                 src={partner.logo}
                 alt={partner.name}
                 className="max-w-full max-h-16"

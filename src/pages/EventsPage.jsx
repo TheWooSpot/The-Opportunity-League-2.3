@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaSearch } from 'react-icons/fa';
 import { supabase } from '../lib/supabase';
+import Image from '../components/common/Image';
 
 const EventsPage = () => {
   useEffect(() => {
@@ -223,13 +224,13 @@ const EventsPage = () => {
               <motion.div
                 key={event.id}
                 layout
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.5) }}
                 className="overflow-hidden transition-all bg-white rounded-lg shadow-card hover:shadow-lg hover:scale-105"
               >
                 <div className="relative h-48">
-                  <img
+                  <Image
                     src={event.image}
                     alt={event.title}
                     className="object-cover w-full h-full"

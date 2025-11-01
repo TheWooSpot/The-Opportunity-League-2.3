@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaHandsHelping, FaDollarSign, FaUserFriends, FaCalendarCheck } from 'react-icons/fa';
+import Image from '../components/common/Image';
 
 const GetInvolvedPage = () => {
   useEffect(() => {
@@ -223,7 +224,7 @@ const GetInvolvedPage = () => {
               >
                 <p className="mb-4 text-lg italic text-dark-lighter">"{testimonial.quote}"</p>
                 <div className="flex items-center">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="object-cover w-12 h-12 mr-4 rounded-full"

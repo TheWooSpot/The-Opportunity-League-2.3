@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Image from '../common/Image';
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +63,7 @@ const TestimonialsSection = () => {
               
               <div className="flex flex-col items-center md:flex-row md:items-start">
                 <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                  <img
+                  <Image
                     src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].name}
                     className="object-cover w-24 h-24 rounded-full"
